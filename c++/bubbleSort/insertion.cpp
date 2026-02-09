@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int arr[]={5,30,1,-4,2};
+    for(int ele:arr){
+        cout<<ele<<" ";
+    }
+    cout<<endl;
+    int n=sizeof(arr)/4;
+    for(int i=1;i<n;i++){
+        int j=i;
+        while(j>=1){
+            if(arr[j]>=arr[j-1]) break;
+            else{
+                swap(arr[j],arr[j-1]);
+                j--;
+            }
+        }
+    }             
+    for(int ele:arr){
+        cout<<ele<<" ";
+    }
+
+}     
+
